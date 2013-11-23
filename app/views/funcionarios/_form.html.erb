@@ -1,0 +1,23 @@
+<% if @funcionario.errors.any? %>
+	<div>
+		<h2><%= t 'message.form.error' %></h2>
+	</div>
+<% end %>
+
+<%= form_for @funcionario do |f| %>
+
+	<p>
+		<%= f.label :nome %>
+		<%= f.text_field :nome %>
+		<%= error_tag @funcionario, :nome %>
+	</p>
+
+	<p>
+		<%= f.label :numero_linha %>
+		<%= f.text_field :numero_linha %>
+		<%= error_tag @funcionario, :numero_linha %>
+	</p>	
+
+	<%= f.submit %>
+
+<% end %>

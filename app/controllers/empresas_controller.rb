@@ -13,6 +13,7 @@ class EmpresasController < ApplicationController
 
 	def create
 		@empresa = Empresa.new(empresa_params)
+
 		@empresa.save
 		respond_with @empresa
 	end

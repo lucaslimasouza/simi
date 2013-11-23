@@ -1,0 +1,5 @@
+<p><%= t '.nome', nome: @funcionario.nome %></p>
+<p><%= t '.numero_linha', numero_linha: @funcionario.numero_linha %></p>
+
+<%= link_to t('links.edit'), edit_funcionario_path(@funcionario) %>
+<%= link_to t('links.list_funcionarios'), funcionarios_path %>

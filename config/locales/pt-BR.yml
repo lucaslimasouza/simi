@@ -10,24 +10,53 @@ pt-BR:
       telefone: "Telefone: %{telefone}"
       endereco: "Endereço: %{endereco}"
     index:
+      titulo: Empresas
       razao_social: "Razão Social"
       cnpj: "CNPJ"
       telefone: "Telefone"
       endereco: "Endereço"
 
+  equipes:
+    new:
+      title: Cadastro
+    edit:
+      title: Editar Equipe
+    show:
+      nome: "Nome: %{nome}"
+    index:
+      titulo: Equipes
+      nome: Nome
+
+  funcionarios:
+    new:
+      title: Cadastro
+    edit:
+      title: Editar Funcionario
+    show:
+      nome: "Nome: %{nome}"
+      numero_linha: "Numero Linha: %{numero_linha}"
+    index:
+      titulo: Funcionarios
+      nome: Nome
+      numero_linha: Numero Linha
+
   links:
     back: Voltar
     home: Página Inicial
     show: Mostrar
-    new_empresa: Nova Empresa
-    list_empresas: Todas Empresas
     edit: Editar
     delete: Apagar
+    new_empresa: Nova Empresa
+    list_empresas: Todas Empresas
+    new_equipe: Nova Equipe
+    list_equipes: Todas Equipes
+    new_funcionario: Novo Funcionario
+    list_funcionarios: Todos Funcionarios
 
   message:
     are_you_sure: Você tem certeza?
     form_error: 'Infelizmente não foi possível completar a ação, pois o formulário possui os seguintes erros:'
-  
+
   table:
     edit: Editar
     show: Visualizar

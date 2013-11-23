@@ -1,0 +1,27 @@
+<h1><%= t'.titulo' %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t'.nome' %></th>
+      <th><%= t'table.show' %></th>
+      <th><%= t'table.edit' %></th>
+      <th><%= t'table.delete' %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @equipes.each do |equipe| %>
+      <tr>
+        <td><%= equipe.nome %></td>
+        <td><%= link_to t('links.show'), equipe %></td>
+        <td><%= link_to t('links.edit'), edit_equipe_path(equipe) %></td>
+        <td><%= link_to t('links.delete'), equipe, method: :delete, data: { confirm: t('message.are_you_sure') } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('links.new_equipe'), new_equipe_path %>
