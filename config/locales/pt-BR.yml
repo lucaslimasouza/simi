@@ -1,0 +1,35 @@
+pt-BR:
+  empresas:
+    new:
+      title: Cadastro
+    edit:
+      title: Editar Empresa
+    show:
+      razao_social: "Razão Social: %{razao_social}"
+      cnpj: "CNPJ: %{cnpj}"
+      telefone: "Telefone: %{telefone}"
+      endereco: "Endereço: %{endereco}"
+    index:
+      razao_social: "Razão Social"
+      cnpj: "CNPJ"
+      telefone: "Telefone"
+      endereco: "Endereço"
+
+  links:
+    back: Voltar
+    home: Página Inicial
+    show: Mostrar
+    new_empresa: Nova Empresa
+    list_empresas: Todas Empresas
+    edit: Editar
+    delete: Apagar
+
+  message:
+    are_you_sure: Você tem certeza?
+    form_error: 'Infelizmente não foi possível completar a ação, pois o formulário possui os seguintes erros:'
+  
+  table:
+    edit: Editar
+    show: Visualizar
+    delete: Apagar
+

@@ -1,0 +1,8 @@
+
+<p><%= t '.razao_social', razao_social: @empresa.razao_social %></p>
+<p><%= t '.cnpj', cnpj: @empresa.cnpj %></p>
+<p><%= t '.telefone', telefone: @empresa.telefone %> </p>
+<p><%= t '.endereco', endereco: @empresa.endereco %></p>
+
+<%= link_to t('links.edit'), edit_empresa_path(@empresa) %>
+<%= link_to t('links.list_empresas'), empresas_path %>

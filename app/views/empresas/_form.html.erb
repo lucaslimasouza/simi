@@ -1,0 +1,34 @@
+<% if @empresa.errors.any? %>
+	<div>
+		<h2><%= t 'message.form.error' %></h2>
+	</div>
+<% end %>
+
+<%= form_for @empresa do |f|%>
+
+	<p>
+		<%= f.label :razao_social %>
+		<%= f.text_field :razao_social %>
+		<%= error_tag @empresa, :razao_social %>
+	</p>
+
+	<p>
+		<%= f.label :cnpj %>
+		<%= f.text_field :cnpj %>
+		<%= error_tag @empresa, :cnpj %>
+	</p>
+
+	<p>
+		<%= f.label :telefone %>
+		<%= f.text_field :telefone %>
+		<%= error_tag @empresa, :telefone %>
+	</p>
+
+	<p>
+		<%= f.label :endereco %>
+		<%= f.text_field :endereco %>
+		<%= error_tag @empresa, :endereco %>
+	</p>
+
+	<%= f.submit %>
+<% end %>
