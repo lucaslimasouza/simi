@@ -10,4 +10,9 @@ module ApplicationHelper
 		end
 	end
 
+	def google_maps_api
+    content_tag(:script,:type => "text/javascript",:src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyC7aAo5T7TgqVJCef01j2rthZoCFMx2i4o&sensor=false") do
+    end
+  end
+
 end

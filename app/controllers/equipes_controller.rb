@@ -3,7 +3,7 @@ class EquipesController < ApplicationController
 
 	def index
 	#LISTAR SOMENTE AS EQUIPES DO USUARIO CORRENTE
-		@equipes = Equipe.all
+		@equipes = Equipe.from(Empresa.first)
 		respond_with @equipes
 	end
 
@@ -15,6 +15,7 @@ class EquipesController < ApplicationController
 	def create
 		@equipe = Equipe.new(equipe_params)
 		#SETAR EMPRESA DO USUARIO CORRENTE
+		@equipe.empresa = Empresa.first
 		@equipe.save
 		respond_with @equipe
 	end
@@ -45,6 +46,7 @@ class EquipesController < ApplicationController
 	end
 
 	def set_equipe
+			#LISTAR SOMENTE AS EQUIPES DO USUARIO CORRENTE
 		@equipe = Equipe.find(params[:id])
 	end
 end

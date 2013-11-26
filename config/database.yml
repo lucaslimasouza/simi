@@ -15,7 +15,11 @@ development:
   pool: 5
   username: root
   password: 06020792
+ # username: lucas
+ # password: Lucas.Lima@ottapdev
   socket: /var/run/mysqld/mysqld.sock
+ # host: 189.120.122.125
+ # port: 3306
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

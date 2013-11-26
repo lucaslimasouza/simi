@@ -18,6 +18,12 @@
 		<%= error_tag @funcionario, :numero_linha %>
 	</p>	
 
+	<p>
+		<%= f.label :equipe %>
+		<%= f.select :equipe_id, Equipe.from(Empresa.first).map {|equipe| [equipe.nome, equipe.id]} %>
+		<%= error_tag @funcionario, :equipe %>
+	</p>
+
 	<%= f.submit %>
 
 <% end %>

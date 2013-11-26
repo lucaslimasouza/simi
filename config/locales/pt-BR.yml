@@ -40,18 +40,39 @@ pt-BR:
       nome: Nome
       numero_linha: Numero Linha
 
+  localizacaos:
+    new:
+      title: Cadastro
+    edit:
+      title: Editar Localização
+    show:
+      latitude: "Latitude: %{latitude}"
+      longitude: "Longitude: %{longitude}"
+    index:
+      titulo: Localizações
+      latitude: Latitude
+      longitude: Longitude
+
+  home:
+    side_bar:
+      categories: Todas Categorias
+
   links:
     back: Voltar
     home: Página Inicial
     show: Mostrar
     edit: Editar
     delete: Apagar
+    report: Relatório
+    records: Cadastros
     new_empresa: Nova Empresa
     list_empresas: Todas Empresas
     new_equipe: Nova Equipe
     list_equipes: Todas Equipes
     new_funcionario: Novo Funcionario
     list_funcionarios: Todos Funcionarios
+    new_localizacao: Nova Localização
+    list_localizacaos: Todas Localizações
 
   message:
     are_you_sure: Você tem certeza?

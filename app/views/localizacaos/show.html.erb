@@ -1,0 +1,5 @@
+<p><%= t '.latitude', latitude: @localizacao.latitude %></p>
+<p><%= t '.longitude', longitude: @localizacao.longitude %></p>
+
+<%= link_to t('links.edit'), edit_localizacao_path(@localizacao) %>
+<%= link_to t('links.list_localizacaos'), localizacaos_path %>

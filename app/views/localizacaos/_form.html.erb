@@ -1,0 +1,23 @@
+<% if @localizacao.errors.any? %>
+	<div>
+		<h2><%= t 'message.form.error' %></h2>
+	</div>
+<% end %>
+
+<%= form_for @localizacao do |f| %>
+
+	<p>
+		<%= f.label :latitude %>
+		<%= f.text_field :latitude %>
+		<%= error_tag @localizacao, :latitude %>
+	</p>
+
+	<p>
+		<%= f.label :longitude %>
+		<%= f.text_field :longitude %>
+		<%= error_tag @localizacao, :longitude %>
+	</p>	
+
+	<%= f.submit %>
+
+<% end %>

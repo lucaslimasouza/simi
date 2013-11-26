@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131123183411) do
+ActiveRecord::Schema.define(version: 20131123191152) do
 
   create_table "empresas", force: true do |t|
     t.string   "razao_social"
@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(version: 20131123183411) do
   add_index "funcionarios", ["equipe_id"], name: "index_funcionarios_on_equipe_id", using: :btree
 
   create_table "localizacaos", force: true do |t|
-    t.float    "latitude"
-    t.float    "longitude"
+    t.string   "latitude"
+    t.string   "longitude"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "funcionario_id"

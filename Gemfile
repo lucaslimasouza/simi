@@ -29,6 +29,9 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'responders'
 
+gem "less-rails"
+gem "twitter-bootstrap-rails"
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -37,6 +40,11 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'shoulda-matchers'
+end
+
+group :production do
+	gem 'rails_12factor'
+	gem 'pg'
 end
 
 # Use ActiveModel has_secure_password

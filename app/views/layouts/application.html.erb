@@ -3,18 +3,49 @@
 <head>
   <title>Simi</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <!-- Maps API Javascript -->
+  <%= google_maps_api %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= render 'layouts/header' %>
+ 
+<div class="container-fluid back-color-panel border">
+	<!-- ROW -->
+	<div class="row-fluid  margin">
 
-	<p id="notice"><%= flash[:notice] %> </p>
+		<div class="span12 ">
+			
+			<% if flash[:notice].present? %>
+				<div class="alert alert-success">
+					<p id="notice"><%= flash[:notice] %> </p>
+				</div>
+			<% end %>
+				
+			<% if alert.present? %>
+				<div class="alert alert-info">
+					<p id="alert"><%= alert %> </p>
+				</div>
+			<% end %>
 
-<% if alert.present? %>
-	<p id="alert"><%= alert %> </p>
-<% end %>
 
-<%= yield %>
+			<%= yield %>
 
+		</div>
+
+	</div>
+	<!-- FIM ROW -->	
+
+</div>
+
+<div class="row-fluid  ">
+	<div class="span12 footer">
+		<div class="span5"></div>
+		<div class="span7">
+			<h6>2013. Todos os direitos reservados.</h6>
+	</div>
+	</div>
+</div>
 </body>
 </html>
