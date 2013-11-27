@@ -1,8 +1,3 @@
-<% if @equipe.errors.any? %>
-	<div>
-		<h2><%= t 'message.form.error' %></h2>
-	</div>
-<% end %>
 
 <%= form_for @equipe do |f| %>
 
@@ -12,6 +7,8 @@
 		<%= error_tag @equipe, :nome %>
 	</p>
 
-	<%= f.submit %>
+	<div class="form-actions">
+		<%= f.submit class: "btn btn-info" %>
+	</div>
 
 <% end %>

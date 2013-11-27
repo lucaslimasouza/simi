@@ -1,9 +1,3 @@
-<% if @funcionario.errors.any? %>
-	<div>
-		<h2><%= t 'message.form.error' %></h2>
-	</div>
-<% end %>
-
 <%= form_for @funcionario do |f| %>
 
 	<p>
@@ -23,7 +17,8 @@
 		<%= f.select :equipe_id, Equipe.from(Empresa.first).map {|equipe| [equipe.nome, equipe.id]} %>
 		<%= error_tag @funcionario, :equipe %>
 	</p>
-
-	<%= f.submit %>
+	<div class="form-actions">
+		<%= f.submit class: "btn btn-info" %>
+	</div>
 
 <% end %>

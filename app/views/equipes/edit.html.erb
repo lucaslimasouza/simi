@@ -1,5 +1,12 @@
-<h1><%= t '.title' %></h1>
+<div class="span8 white padding">
 
-<%= render 'form' %>
+	<fieldset>
+	  <legend><%= t '.title' %></legend>
 
-<%= link_to t('links.back'), equipes_path %>
+			<%= render 'form' %>
+
+	</fieldset>
+
+	<%= link_to t('links.back'), equipes_path, class: "btn"  %>
+
+</div>
