@@ -1,29 +1,33 @@
-<h1><%= t'.titulo' %></h1>
+<div class="span12 white padding">
 
-<table>
-  <thead>
-    <tr>
-      <th><%= t'.nome' %></th>
-      <th><%= t'.numero_linha' %></th>
-      <th><%= t'table.show' %></th>
-      <th><%= t'table.edit' %></th>
-      <th><%= t'table.delete' %></th>
-    </tr>
-  </thead>
+  <fieldset>
+    <legend><%= t'.titulo' %></legend>
 
-  <tbody>
-    <% @funcionarios.each do |funcionario| %>
-      <tr>
-        <td><%= funcionario.nome %></td>
-        <td><%= funcionario.numero_linha %></td>
-        <td><%= link_to t('links.show'), funcionario %></td>
-        <td><%= link_to t('links.edit'), edit_funcionario_path(funcionario) %></td>
-        <td><%= link_to t('links.delete'), funcionario, method: :delete, data: { confirm: t('message.are_you_sure') } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th><%= t'.nome' %></th>
+          <th><%= t'.numero_linha' %></th>
+          <th><%= t'table.show' %></th>
+          <th><%= t'table.edit' %></th>
+          <th><%= t'table.delete' %></th>
+        </tr>
+      </thead>
 
-<br>
+      <tbody>
+        <% @funcionarios.each do |funcionario| %>
+          <tr>
+            <td><%= funcionario.nome %></td>
+            <td><%= funcionario.numero_linha %></td>
+            <td><%= link_to image_tag("/imgs/icons/show_icon.png"), funcionario %></td>
+            <td><%= link_to image_tag("/imgs/icons/edit_icon.png"), edit_funcionario_path(funcionario) %></td>
+            <td><%= link_to image_tag("/imgs/icons/delete_icon2.png"), funcionario, method: :delete, data: { confirm: t('message.are_you_sure') } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </fieldset>
 
-<%= link_to t('links.new_funcionario'), new_funcionario_path %>
+  <%= link_to t('links.new_funcionario'), new_funcionario_path, class: "btn" %>
+
+</div>
